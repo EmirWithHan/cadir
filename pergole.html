@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<html class="light" lang="tr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Öz Ada Çadır - Pergole Sistemleri</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600&amp;family=Manrope:wght@600;700;800&amp;family=Work+Sans:wght@400;500&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container": "#ebeeed",
+                        "surface": "#f7faf9",
+                        "on-primary-fixed-variant": "#2e476f",
+                        "on-tertiary-container": "#c3966a",
+                        "on-secondary-container": "#5b646a",
+                        "surface-container-high": "#e6e9e8",
+                        "outline-variant": "#c4c6cf",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#181c1c",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed-variant": "#3f484d",
+                        "on-secondary-fixed": "#141d21",
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "primary": "#002046",
+                        "inverse-primary": "#aec7f7",
+                        "secondary-fixed-dim": "#bfc8ce",
+                        "secondary-container": "#d8e1e7",
+                        "primary-fixed-dim": "#aec7f7",
+                        "secondary-fixed": "#dbe4ea",
+                        "surface-container-highest": "#e0e3e2",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed": "#001b3d",
+                        "surface-variant": "#e0e3e2",
+                        "inverse-surface": "#2d3131",
+                        "tertiary-fixed-dim": "#eebd8e",
+                        "on-tertiary-fixed-variant": "#61401b",
+                        "on-surface": "#181c1c",
+                        "on-surface-variant": "#44474e",
+                        "tertiary-fixed": "#ffdcbd",
+                        "on-primary": "#ffffff",
+                        "background": "#f7faf9",
+                        "tertiary": "#341b00",
+                        "surface-dim": "#d7dbda",
+                        "surface-container-low": "#f1f4f3",
+                        "primary-fixed": "#d6e3ff",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#eef1f0",
+                        "secondary": "#576065",
+                        "primary-container": "#1b365d",
+                        "on-tertiary-fixed": "#2c1600",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#87a0cd",
+                        "surface-tint": "#465f88",
+                        "outline": "#74777f",
+                        "tertiary-container": "#4e2f0c",
+                        "surface-bright": "#f7faf9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px",
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Manrope"],
+                        "label-sm": ["Hanken Grotesk"],
+                        "headline-lg": ["Manrope"],
+                        "display-lg": ["Manrope"],
+                        "body-md": ["Work Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col antialiased">
+    <!-- TopNavBar -->
+    <nav
+        class="bg-surface-container-lowest dark:bg-surface-container-low fixed top-0 w-full z-50 border-b border-outline-variant dark:border-outline shadow-sm dark:shadow-none">
+        <div
+            class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-20">
+            <div
+                class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg font-extrabold text-primary dark:text-inverse-primary tracking-tight">
+                Öz Ada Çadır
+            </div>
+            <div class="hidden md:flex gap-8 items-center h-full">
+                <a class="text-on-surface-variant dark:text-surface-variant font-body-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200 active:scale-95"
+                    href="index.html">Ana Sayfa</a>
+                <a class="text-on-surface-variant dark:text-surface-variant font-body-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200 active:scale-95 transition-transform duration-100 flex h-full items-center"
+                    href="semsiye.html">Şemsiye</a>
+                <a class="text-on-surface-variant dark:text-surface-variant font-body-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200 active:scale-95 transition-transform duration-100 flex h-full items-center"
+                    href="cardak.html">Çardak</a>
+                <a class="text-primary dark:text-inverse-primary border-b-2 border-primary dark:border-inverse-primary pb-1 font-body-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200 active:scale-95"
+                    href="pergole.html">Pergole</a>
+                <a class="text-on-surface-variant dark:text-surface-variant font-body-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200 active:scale-95 transition-transform duration-100 flex h-full items-center"
+                    href="tente.html">Tente</a>
+            </div>
+            <a href="tel:+905551234567"
+                class="bg-primary text-on-primary font-label-sm text-label-sm px-6 py-3 rounded hover:bg-primary-container transition-colors duration-200 hidden md:inline-block text-center cursor-pointer"
+                style="box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);">
+                İletişime Geç
+            </a>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-primary focus:outline-none">
+                <span class="material-symbols-outlined text-3xl transition-transform duration-200">menu</span>
+            </button>
+        </div>
+
+        <!-- Mobil Açılır Menü -->
+        <div id="mobile-menu"
+            class="hidden absolute top-20 left-0 w-full bg-surface-container-lowest border-b border-outline-variant shadow-lg flex-col px-margin-mobile py-6 gap-5 z-40 md:hidden">
+            <a class="text-on-surface-variant font-body-md text-lg hover:text-primary block transition-colors"
+                href="index.html">Ana Sayfa</a>
+            <a class="text-on-surface-variant font-body-md text-lg hover:text-primary block transition-colors"
+                href="semsiye.html">Şemsiye</a>
+            <a class="text-on-surface-variant font-body-md text-lg hover:text-primary block transition-colors"
+                href="cardak.html">Çardak</a>
+            <a class="text-primary font-body-md text-lg border-b-2 border-primary pb-1 block transition-colors"
+                href="pergole.html">Pergole</a>
+            <a class="text-on-surface-variant font-body-md text-lg hover:text-primary block transition-colors"
+                href="tente.html">Tente</a>
+            <div class="h-px w-full bg-outline-variant opacity-30 my-1"></div>
+            <a href="tel:+905551234567"
+                class="bg-primary text-on-primary font-label-sm text-center px-6 py-4 rounded hover:bg-primary-container transition-colors block">
+                Hemen Ara
+            </a>
+        </div>
+    </nav>
+    <!-- Main Content Canvas -->
+    <main class="flex-grow pt-20">
+        <!-- Hero Section -->
+        <section class="relative w-full h-[60vh] md:h-[80vh] bg-surface-container flex items-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img alt="Premium retractable pergola system extended over a modern outdoor patio, providing shade over a dining table. The aluminum structure is dark gray, contrasting with the light beige waterproof fabric. The scene is bathed in bright, natural daylight, conveying a sense of luxury outdoor living and robust architectural design."
+                    class="w-full h-full object-cover object-center"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBd7g-rTRo7_4pMeUMf2owcruPoA5wdc76x-5d2h93-tWJTu2xnd29h0Xm3p0wqcvmVVEs6cCxWZDnlXgZGq1Bu19ykFJwVFoJyrnVv2XrgHZMA-6VkRncwAZXYmyyJfV0V4YA1fekhZdbwGYVPPH1hJ8_vt46-6Lp6Rx-IVKKWAFx0oteducNk292zUnc-wshu0TI5VFmn0oRvFlzBCK2Qbo_qef_pYg-WFnXgCBT7vsdAecCC0qMyCCRUOUD6nNTfuhfMSVp8Cg" />
+                <div class="absolute inset-0 bg-gradient-to-r from-background/90 via-background/50 to-transparent">
+                </div>
+            </div>
+            <div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full">
+                <div class="max-w-2xl">
+                    <span
+                        class="inline-block bg-tertiary-fixed-dim/30 text-on-tertiary-fixed-variant font-label-sm text-label-sm px-3 py-1 rounded-full mb-4 uppercase tracking-widest">
+                        Mimari Dış Mekan Çözümleri
+                    </span>
+                    <h1 class="font-display-lg text-display-lg text-on-background mb-6">
+                        Modern Pergole Sistemleri
+                    </h1>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-8 text-lg max-w-xl">
+                        Dört mevsim kullanılabilen, motorlu ve aydınlatmalı premium pergole sistemleriyle yaşam
+                        alanlarınızı genişletin. Estetik ve mühendisliğin mükemmel uyumu.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#modeller"
+                            class="bg-primary text-on-primary font-label-sm text-label-sm px-8 py-4 rounded border-t border-white/20 hover:bg-primary-container transition-colors duration-200 text-center inline-block cursor-pointer">
+                            Katoloğu İncele
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Technical Features Grid -->
+        <section class="py-24 bg-surface">
+            <div class="mb-16 text-center">
+                <div id="modeller" class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                    <img src="foto/pergole/per1.jpeg" alt="Çardak Mühendislik Detayı 1" loading="lazy"
+                        class="w-full h-64 object-cover rounded-xl border border-outline-variant shadow-sm hover:shadow-[0_10px_20px_rgba(0,32,70,0.08)] transition-shadow duration-300">
+                    <img src="foto/pergole/per2.jpeg" alt="Çardak Mühendislik Detayı 2" loading="lazy"
+                        class="w-full h-64 object-cover rounded-xl border border-outline-variant shadow-sm hover:shadow-[0_10px_20px_rgba(0,32,70,0.08)] transition-shadow duration-300">
+                    <img src="foto/pergole/per3.jpeg" alt="Çardak Mühendislik Detayı 3" loading="lazy"
+                        class="w-full h-64 object-cover rounded-xl border border-outline-variant shadow-sm hover:shadow-[0_10px_20px_rgba(0,32,70,0.08)] transition-shadow duration-300">
+                    <img src="foto/pergole/per4.jpeg" alt="Çardak Mühendislik Detayı 1" loading="lazy"
+                        class="w-full h-64 object-cover rounded-xl border border-outline-variant shadow-sm hover:shadow-[0_10px_20px_rgba(0,32,70,0.08)] transition-shadow duration-300">
+                    <img src="foto/pergole/per5.jpeg" alt="Çardak Mühendislik Detayı 2" loading="lazy"
+                        class="w-full h-64 object-cover rounded-xl border border-outline-variant shadow-sm hover:shadow-[0_10px_20px_rgba(0,32,70,0.08)] transition-shadow duration-300">
+                    <img src="foto/pergole/per6.jpeg" alt="Çardak Mühendislik Detayı 3" loading="lazy"
+                        class="w-full h-64 object-cover rounded-xl border border-outline-variant shadow-sm hover:shadow-[0_10px_20px_rgba(0,32,70,0.08)] transition-shadow duration-300">
+                    <img src="foto/pergole/per7.jpeg" alt="Çardak Mühendislik Detayı 3" loading="lazy"
+                        class="w-full h-64 object-cover rounded-xl border border-outline-variant shadow-sm hover:shadow-[0_10px_20px_rgba(0,32,70,0.08)] transition-shadow duration-300">
+                </div>
+            </div>
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="text-center mb-16">
+                    <h2
+                        class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-4">
+                        Üstün Donanım Özellikleri
+                    </h2>
+                    <p class="text-on-surface-variant max-w-2xl mx-auto">
+                        Endüstri standardı bileşenler ve yüksek kaliteli malzemelerle tasarlanmış uzun ömürlü yapı.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                    <!-- Feature Card 1 -->
+                    <div
+                        class="bg-surface-container-lowest p-8 border border-outline-variant rounded-lg hover:shadow-[0_10px_20px_-5px_rgba(0,32,70,0.08)] transition-all duration-300">
+                        <div
+                            class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center mb-6 text-on-secondary-container">
+                            <span class="material-symbols-outlined" data-weight="fill"
+                                style="font-variation-settings: 'FILL' 1;">precision_manufacturing</span>
+                        </div>
+                        <h3 class="font-headline-lg-mobile text-xl font-bold text-on-background mb-3">Somfy Motor
+                            Teknolojisi</h3>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">
+                            Dünya lideri Somfy marka tüp motorlar ile sessiz ve sarsıntısız açılıp kapanma deneyimi.
+                            Uzaktan kumanda ve akıllı ev entegrasyonu standart olarak sunulur.
+                        </p>
+                    </div>
+                    <!-- Feature Card 2 -->
+                    <div
+                        class="bg-surface-container-lowest p-8 border border-outline-variant rounded-lg hover:shadow-[0_10px_20px_-5px_rgba(0,32,70,0.08)] transition-all duration-300">
+                        <div
+                            class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center mb-6 text-on-secondary-container">
+                            <span class="material-symbols-outlined" data-weight="fill"
+                                style="font-variation-settings: 'FILL' 1;">water_drop</span>
+                        </div>
+                        <h3 class="font-headline-lg-mobile text-xl font-bold text-on-background mb-3">Blackout Kumaş
+                        </h3>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">
+                            %100 su geçirmez, alev yürütmez ve UV korumalı üç katmanlı PVC blackout membran. İklim
+                            koşullarına karşı maksimum izolasyon sağlar.
+                        </p>
+                    </div>
+                    <!-- Feature Card 3 -->
+                    <div
+                        class="bg-surface-container-lowest p-8 border border-outline-variant rounded-lg hover:shadow-[0_10px_20px_-5px_rgba(0,32,70,0.08)] transition-all duration-300">
+                        <div
+                            class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center mb-6 text-on-secondary-container">
+                            <span class="material-symbols-outlined" data-weight="fill"
+                                style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+                        </div>
+                        <h3 class="font-headline-lg-mobile text-xl font-bold text-on-background mb-3">Entegre LED
+                            Aydınlatma</h3>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">
+                            Kumaş profillerine gizlenmiş dimlenebilir (ayarlanabilir) Samsung LED modüller. Akşamları
+                            mekanınıza mükemmel ambiyans katar.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Structure Detail Section (Bento Style) -->
+        <section class="py-24 bg-surface-container-low">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter h-auto lg:h-[600px]">
+                    <!-- Main Image Block -->
+                    <div
+                        class="lg:col-span-8 bg-surface-container-lowest rounded-xl overflow-hidden relative border border-outline-variant group">
+                        <img alt="A detailed close-up shot of a modern pergola aluminum profile and structural joint. The image highlights the powder-coated dark gray finish, the precise engineering of the connections, and the tension of the beige fabric above. Soft, diffused daylight emphasizes the premium build quality and metallic texture against a clear blue sky."
+                            class="w-full h-full object-cover"
+                            data-alt="A detailed close-up shot of a modern pergola aluminum profile and structural joint. The image highlights the powder-coated dark gray finish, the precise engineering of the connections, and the tension of the beige fabric above. Soft, diffused daylight emphasizes the premium build quality and metallic texture against a clear blue sky."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_pTLT7ggl5ChdRSfpRm71gnKd94XjIa_4c1fpmplBobC2xdSBck34bzah2-ol1a0DMHjkOemEpPhDgE-ueusJY-lmVc20QRGmxVZQH_46XXebKNGTTnKnYPAp70Ln1GDuY1yNuJt-705LuPbuKe9crhLGZ6bRcNm6xrN_5B903mg9GxviTQGC1U6WEsK7OH5lRDSVTvs9ziIV4KqgV6uQwioA3URb-HybwNQrz0KEENsvtuMtG7MBF2AD1dctcSaXBzneupcuUQ" />
+                        <div class="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black/80 to-transparent">
+                            <h3 class="font-headline-lg text-white mb-2">Alüminyum Konstrüksiyon</h3>
+                            <p class="text-white/80 font-body-md max-w-xl">
+                                Elektrostatik toz boyalı, paslanmaz T6063 alüminyum profiller ile rüzgar ve kar yüküne
+                                karşı üstün dayanım.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Details Column -->
+                    <div class="lg:col-span-4 flex flex-col gap-gutter">
+                        <div class="flex-1 bg-surface-container-lowest p-8 border border-outline-variant rounded-xl">
+                            <div class="flex items-center gap-4 mb-4">
+                                <span class="material-symbols-outlined text-primary text-3xl">storm</span>
+                                <h4 class="font-headline-lg-mobile text-lg font-bold">Drenaj Sistemi</h4>
+                            </div>
+                            <p class="text-on-surface-variant text-sm">
+                                Dikmelerin içine gizlenmiş su tahliye kanalları sayesinde yağmur suyu görünmeden tahliye
+                                edilir.
+                            </p>
+                        </div>
+                        <div class="flex-1 bg-surface-container-lowest p-8 border border-outline-variant rounded-xl">
+                            <div class="flex items-center gap-4 mb-4">
+                                <span class="material-symbols-outlined text-primary text-3xl">palette</span>
+                                <h4 class="font-headline-lg-mobile text-lg font-bold">Renk Seçenekleri</h4>
+                            </div>
+                            <p class="text-on-surface-variant text-sm">
+                                RAL kataloğundaki tüm renklere ek olarak özel ahşap transfer desenleri mevcuttur.
+                            </p>
+                            <div class="flex gap-2 mt-4">
+                                <div class="w-8 h-8 rounded bg-[#2A2A2A] border border-outline-variant"
+                                    title="Antrasit Gri"></div>
+                                <div class="w-8 h-8 rounded bg-[#EBEBEB] border border-outline-variant"
+                                    title="Kirli Beyaz"></div>
+                                <div class="w-8 h-8 rounded bg-[#8B5A2B] border border-outline-variant"
+                                    title="Ahşap Desen"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-primary text-on-primary w-full">
+        <div
+            class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-20 flex flex-col md:flex-row justify-between gap-gutter">
+            <div class="md:w-1/3">
+                <div
+                    class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-on-primary mb-4 tracking-tight">
+                    Öz Ada Çadır
+                </div>
+                <p class="font-body-md text-body-md text-on-primary-container opacity-80 mb-6 max-w-sm">
+                    Mimari Dış Mekan Çözümleri. Profesyonel, sağlam ve zarif gölgelendirme sistemleri ile yaşam
+                    alanlarınıza değer katıyoruz.
+                </p>
+            </div>
+            <div class="md:w-2/3 flex flex-col md:flex-row justify-end gap-12 md:gap-24">
+                <div class="flex flex-col">
+                    <span class="font-label-sm text-label-sm text-on-primary mb-2 opacity-50 uppercase tracking-wider">İletişim</span>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Öz+Ada+Çadır+Tente,+Ankara&query_place_id=ChIJQasmHlxO0xQRZjpFrcmyrl0" target="_blank" rel="noopener noreferrer" class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-secondary-fixed-dim hover:opacity-100 transition-all cursor-pointer">
+                        Lokasyon: Hacı Bayram, A.Adnan Saygun Cd. 35/A, 06050 Altındağ/Ankara
+                    </a>
+                    <a href="tel:+905551234567" class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-secondary-fixed-dim hover:opacity-100 transition-all cursor-pointer">
+                        Numara: +90 555 123 4567
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-on-primary/10">
+            <div
+                class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-6 text-center md:text-left">
+                <span class="font-body-md text-body-md text-on-primary-container opacity-60 text-sm">
+                    © 2024 Öz Ada Çadır. Mimari Dış Mekan Çözümleri.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Kayan (Floating) Telefon Butonu -->
+    <a href="tel:+905551234567"
+        class="fixed md:hidden bottom-6 right-6 z-[60] bg-primary text-on-primary w-16 h-16 rounded-full flex items-center justify-center shadow-[0_8px_20px_rgba(0,32,70,0.3)] hover:bg-primary-container hover:scale-110 transition-all duration-300 group cursor-pointer"
+        aria-label="Bizi Arayın">
+        <span
+            class="material-symbols-outlined text-3xl group-hover:rotate-12 transition-transform duration-300">call</span>
+    </a>
+
+    <!-- Hamburger Menü Tetikleyici Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileBtn && mobileMenu) {
+                const menuIcon = mobileBtn.querySelector('span');
+
+                mobileBtn.addEventListener('click', function () {
+                    mobileMenu.classList.toggle('hidden');
+                    mobileMenu.classList.toggle('flex');
+
+                    if (mobileMenu.classList.contains('flex')) {
+                        menuIcon.textContent = 'close';
+                    } else {
+                        menuIcon.textContent = 'menu';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

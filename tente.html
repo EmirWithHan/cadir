@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Tente Sistemleri - Öz Ada Çadır</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&amp;family=Work+Sans:wght@400;600&amp;family=Hanken+Grotesk:wght@600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            font-feature-settings: 'liga';
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container": "#ebeeed",
+                        "surface": "#f7faf9",
+                        "on-primary-fixed-variant": "#2e476f",
+                        "on-tertiary-container": "#c3966a",
+                        "on-secondary-container": "#5b646a",
+                        "surface-container-high": "#e6e9e8",
+                        "outline-variant": "#c4c6cf",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#181c1c",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed-variant": "#3f484d",
+                        "on-secondary-fixed": "#141d21",
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "primary": "#002046",
+                        "inverse-primary": "#aec7f7",
+                        "secondary-fixed-dim": "#bfc8ce",
+                        "secondary-container": "#d8e1e7",
+                        "primary-fixed-dim": "#aec7f7",
+                        "secondary-fixed": "#dbe4ea",
+                        "surface-container-highest": "#e0e3e2",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed": "#001b3d",
+                        "surface-variant": "#e0e3e2",
+                        "inverse-surface": "#2d3131",
+                        "tertiary-fixed-dim": "#eebd8e",
+                        "on-tertiary-fixed-variant": "#61401b",
+                        "on-surface": "#181c1c",
+                        "on-surface-variant": "#44474e",
+                        "tertiary-fixed": "#ffdcbd",
+                        "on-primary": "#ffffff",
+                        "background": "#f7faf9",
+                        "tertiary": "#341b00",
+                        "surface-dim": "#d7dbda",
+                        "surface-container-low": "#f1f4f3",
+                        "primary-fixed": "#d6e3ff",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#eef1f0",
+                        "secondary": "#576065",
+                        "primary-container": "#1b365d",
+                        "on-tertiary-fixed": "#2c1600",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#87a0cd",
+                        "surface-tint": "#465f88",
+                        "outline": "#74777f",
+                        "tertiary-container": "#4e2f0c",
+                        "surface-bright": "#f7faf9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px",
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Manrope"],
+                        "label-sm": ["Hanken Grotesk"],
+                        "headline-lg": ["Manrope"],
+                        "display-lg": ["Manrope"],
+                        "body-md": ["Work Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-background text-on-background font-body-md antialiased pt-20">
+    <!-- TopNavBar -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-surface-container-lowest dark:bg-surface-container-low shadow-sm dark:shadow-none border-b border-outline-variant dark:border-outline">
+        <div
+            class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex justify-between items-center h-20">
+            <!-- Brand -->
+            <a class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg font-extrabold text-primary dark:text-inverse-primary tracking-tight"
+                href="#">
+                Öz Ada Çadır
+            </a>
+            <!-- Navigation Links (Web) -->
+            <div class="hidden md:flex gap-gutter items-center">
+                <a class="text-on-surface-variant dark:text-surface-variant font-body-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200 active:scale-95"
+                    href="index.html">Ana Sayfa</a>
+                <a class="text-on-surface-variant dark:text-surface-variant font-body-md text-body-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200"
+                    href="semsiye.html">Şemsiye</a>
+                <a class="text-on-surface-variant dark:text-surface-variant font-body-md text-body-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200"
+                    href="cardak.html">Çardak</a>
+                <a class="text-on-surface-variant dark:text-surface-variant font-body-md text-body-md hover:text-primary dark:hover:text-inverse-primary transition-colors duration-200"
+                    href="pergole.html">Pergole</a>
+                <a class="text-primary dark:text-inverse-primary font-body-md text-body-md border-b-2 border-primary dark:border-inverse-primary pb-1 active:scale-95 transition-transform duration-100"
+                    href="tente.html">Tente</a>
+            </div>
+            <!-- Trailing Action -->
+            <a href="tel:+905551234567"
+                class="bg-primary text-on-primary font-label-sm text-label-sm px-6 py-3 rounded hover:bg-primary-container transition-colors duration-200 hidden md:inline-block text-center cursor-pointer"
+                style="box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);">
+                İletişim : 0 555 123 45 67
+            </a>
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-btn" class="md:hidden text-primary focus:outline-none">
+                <span class="material-symbols-outlined text-3xl transition-transform duration-200">menu</span>
+            </button>
+        </div>
+
+        <!-- Mobil Açılır Menü -->
+        <div id="mobile-menu"
+            class="hidden absolute top-20 left-0 w-full bg-surface-container-lowest border-b border-outline-variant shadow-lg flex-col px-margin-mobile py-6 gap-5 z-40 md:hidden">
+            <a class="text-on-surface-variant font-body-md text-lg hover:text-primary block transition-colors"
+                href="index.html">Ana Sayfa</a>
+            <a class="text-on-surface-variant font-body-md text-lg hover:text-primary block transition-colors"
+                href="semsiye.html">Şemsiye</a>
+            <a class="text-on-surface-variant font-body-md text-lg hover:text-primary block transition-colors"
+                href="cardak.html">Çardak</a>
+            <a class="text-on-surface-variant font-body-md text-lg hover:text-primary block transition-colors"
+                href="pergole.html">Pergole</a>
+            <a class="text-primary font-body-md text-lg font-semibold block transition-colors"
+                href="tente.html">Tente</a>
+            <div class="h-px w-full bg-outline-variant opacity-30 my-1"></div>
+            <a href="tel:+905551234567"
+                class="bg-primary text-on-primary font-label-sm text-center px-6 py-4 rounded hover:bg-primary-container transition-colors block">
+                Hemen Ara
+            </a>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <header class="relative w-full min-h-[80vh] flex items-center bg-surface-container-lowest overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img alt="" class="w-full h-full object-cover object-center"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDY4udLdyCgswMXgnLgCO1YimvHW7pAcoefBLzEEnUy7fnBRSVS5MH8aShQ33jHcQkSOsLF0X40YRgMpYUvAQ33lHO3SRB728p39NuphYMvrhiihtCBHiuyXQC57ICSUwXvDHhyRmALeL7qIthlaAftswdnd9kBC3nL4syGtAE7p80PRvLB3Iq9HQgsYAU93ojph4HhPYcYjKxQsw7tliN5wx8Ys9ozw3j-F0vA-yoWl9tx-9kyw9mMP8CNnB68W5m0iOv_SyYIJg" />
+            <div
+                class="absolute inset-0 bg-gradient-to-r from-surface-container-lowest/90 to-surface-container-lowest/20">
+            </div>
+        </div>
+        <div
+            class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter w-full">
+            <div class="md:col-span-6 flex flex-col justify-center">
+                <span
+                    class="font-label-sm text-label-sm text-on-tertiary-container uppercase tracking-wider mb-4">Premium
+                    Dış Mekan Çözümleri</span>
+                <h1 class="font-display-lg text-display-lg text-primary mb-6">Mimari Estetiği Gölgelendirme ile
+                    Buluşturun.</h1>
+                <p class="font-body-md text-body-md text-on-surface-variant mb-8 max-w-lg">
+                    Modern mimariyle uyumlu, dayanıklı ve şık tente sistemlerimizle yaşam alanlarınızı güneşin ve
+                    yağmurun etkilerinden korurken estetik bir değer katın.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#modeller"
+                        class="bg-primary text-on-primary font-label-sm text-label-sm px-8 py-4 rounded border-t border-white/20 hover:bg-primary-container transition-colors duration-200 text-center inline-block cursor-pointer">
+                        Modelleri İncele
+                    </a>
+
+                    <a href="#teknik"
+                        class="bg-transparent text-primary border border-outline font-label-sm text-label-sm px-8 py-4 rounded hover:bg-surface-container transition-colors duration-200 text-center inline-block cursor-pointer">
+                        Teknik Özellikler
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Neden Bizim Tentelerimiz? (Features) -->
+    <section class="py-24 bg-surface">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="mb-16 text-center">
+                <div id="modeller" class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                    <img src="foto/tente/tente1.jpeg" alt="Tente 1" loading="lazy"
+                        class="w-full h-64 object-cover rounded-xl border border-outline-variant shadow-sm hover:shadow-[0_10px_20px_rgba(0,32,70,0.08)] transition-shadow duration-300">
+                    <img src="foto/tente/tente2.jpeg" alt="Tente 2" loading="lazy"
+                        class="w-full h-64 object-cover rounded-xl border border-outline-variant shadow-sm hover:shadow-[0_10px_20px_rgba(0,32,70,0.08)] transition-shadow duration-300">
+                    <img src="foto/tente/tente3.jpeg" alt="Tente 3" loading="lazy"
+                        class="w-full h-64 object-cover rounded-xl border border-outline-variant shadow-sm hover:shadow-[0_10px_20px_rgba(0,32,70,0.08)] transition-shadow duration-300">
+                    <img src="foto/tente/tente4.jpeg" alt="Tente 4" loading="lazy"
+                        class="w-full h-64 object-cover rounded-xl border border-outline-variant shadow-sm hover:shadow-[0_10px_20px_rgba(0,32,70,0.08)] transition-shadow duration-300">
+                    <img src="foto/tente/tente5.jpeg" alt="Tente 5" loading="lazy"
+                        class="w-full h-64 object-cover rounded-xl border border-outline-variant shadow-sm hover:shadow-[0_10px_20px_rgba(0,32,70,0.08)] transition-shadow duration-300">
+                    <img src="foto/tente/tente6.jpeg" alt="Tente 6" loading="lazy"
+                        class="w-full h-64 object-cover rounded-xl border border-outline-variant shadow-sm hover:shadow-[0_1０px_2０px_rgba(０,３２,７０,０.０８)] transition-shadow duration-3００">
+                    <img src="foto/tente/tente7.jpeg" alt="Tente 1" loading="lazy"
+                        class="w-full h-64 object-cover rounded-xl border border-outline-variant shadow-sm hover:shadow-[0_10px_20px_rgba(0,32,70,0.08)] transition-shadow duration-300">
+                    <img src="foto/tente/tente8.jpeg" alt="Tente 2" loading="lazy"
+                        class="w-full h-64 object-cover rounded-xl border border-outline-variant shadow-sm hover:shadow-[0_10px_20px_rgba(0,32,70,0.08)] transition-shadow duration-300">
+                    <img src="foto/tente/tente9.jpeg" alt="Tente 3" loading="lazy"
+                        class="w-full h-64 object-cover rounded-xl border border-outline-variant shadow-sm hover:shadow-[0_10px_20px_rgba(0,32,70,0.08)] transition-shadow duration-300">
+                    <img src="foto/tente/tente10.jpeg" alt="Tente 1" loading="lazy"
+                        class="w-full h-64 object-cover rounded-xl border border-outline-variant shadow-sm hover:shadow-[0_10px_20px_rgba(0,32,70,0.08)] transition-shadow duration-300">
+                    <img src="foto/tente/tente11.jpeg" alt="Tente 2" loading="lazy"
+                        class="w-full h-64 object-cover rounded-xl border border-outline-variant shadow-sm hover:shadow-[0_10px_20px_rgba(0,32,70,0.08)] transition-shadow duration-300">
+                    <img src="foto/tente/tente12.jpeg" alt="Tente 3" loading="lazy"
+                        class="w-full h-64 object-cover rounded-xl border border-outline-variant shadow-sm hover:shadow-[0_10px_20px_rgba(0,32,70,0.08)] transition-shadow duration-300">
+                </div>
+            </div>
+            <div class="text-center mb-16">
+                <h2 id="teknik"
+                    class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">
+                    Neden Bizim Tentelerimiz?</h2>
+                <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">
+                    Yüksek mühendislik standartları ve premium malzemelerle üretilen tente sistemlerimizin öne çıkan
+                    özellikleri.
+                </p>
+            </div>
+            <!-- Bento Grid Features -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Feature 1: Durability -->
+                <div
+                    class="col-span-1 bg-surface-container-lowest p-8 border border-outline-variant rounded-lg hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(0,32,70,0.08)] transition-all duration-300">
+                    <div
+                        class="w-12 h-12 bg-surface-container-high rounded flex items-center justify-center mb-6 text-primary">
+                        <span class="material-symbols-outlined" data-icon="shield">shield</span>
+                    </div>
+                    <h3
+                        class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-3 text-[24px] leading-[32px]">
+                        Ekstra Dayanıklılık</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">
+                        Zorlu hava koşullarına karşı test edilmiş, güçlendirilmiş alüminyum profil yapısı ve paslanmaz
+                        çelik bağlantı elemanları.
+                    </p>
+                </div>
+                <!-- Feature 2: Architectural Style -->
+                <div
+                    class="col-span-1 bg-surface-container-lowest p-8 border border-outline-variant rounded-lg hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(0,32,70,0.08)] transition-all duration-300">
+                    <div
+                        class="w-12 h-12 bg-surface-container-high rounded flex items-center justify-center mb-6 text-primary">
+                        <span class="material-symbols-outlined" data-icon="architecture">architecture</span>
+                    </div>
+                    <h3
+                        class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-3 text-[24px] leading-[32px]">
+                        Mimari Uyum</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">
+                        Mevcut yapıların dış cephe tasarımına kusursuz entegre olan, minimalist ve modern çizgiler
+                        taşıyan estetik form.
+                    </p>
+                </div>
+                <!-- Feature 3: Ease of Use -->
+                <div
+                    class="col-span-1 bg-surface-container-lowest p-8 border border-outline-variant rounded-lg hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(0,32,70,0.08)] transition-all duration-300">
+                    <div
+                        class="w-12 h-12 bg-surface-container-high rounded flex items-center justify-center mb-6 text-primary">
+                        <span class="material-symbols-outlined" data-icon="touch_app">touch_app</span>
+                    </div>
+                    <h3
+                        class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-3 text-[24px] leading-[32px]">
+                        Akıllı Kullanım</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">
+                        Motorize sistem seçenekleri, uzaktan kumanda ve rüzgar/güneş sensörleri ile zahmetsiz ve
+                        otomatik iklimlendirme kontrolü.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Details Section -->
+    <section class="py-24 bg-surface-container-low">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+                <div
+                    class="order-2 md:order-1 relative h-[500px] w-full rounded-lg overflow-hidden border border-outline-variant">
+                    <img alt="Yakın çekim tente kumaşı ve alüminyum mekanizma detayı, güneşli bir günde."
+                        class="w-full h-full object-cover"
+                        data-alt="A detailed close-up shot of a high-quality awning fabric and powder-coated aluminum mechanism. The scene is lit by bright, natural midday sunlight casting soft, diffused shadows, highlighting the tactile texture of the canvas material. The overall aesthetic is structural, clean, and modern, utilizing a color palette of deep navy and crisp white. The mood conveys rugged durability and elegant engineering."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLd-kxhahunG8BGOYlh9VjyQ8oqss7qmKD2fDpFNZ2kUCAX6iKQVA97whQugA4UqPFAr2qRfdY1tFbWKRS6cR1iGqXx7h8m0KOeeSaya--JsFK0PUnENJgNbiiYZUGkpZ2CsqW8HPVmm4wOAaokj3X9pm8PneVKYmOK4sWuWTetZpnqr8Eoc4I4trJeZpJasdxrTwhmAVSXHuRTHXbne_h8iC6IM2UWlZA74KQ3LnmzXy-eLe3aqgP3sY5X3xD4PR3G_ghPLwiog" />
+                </div>
+                <div class="order-1 md:order-2 pl-0 md:pl-12">
+                    <h2
+                        class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-6">
+                        Malzeme Kalitesi ve İşçilik</h2>
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-on-tertiary-container mt-1"
+                                data-icon="check_circle" data-weight="fill">check_circle</span>
+                            <div>
+                                <strong class="font-body-md text-body-md font-semibold text-on-surface block">İthal
+                                    Akrilik Kumaş</strong>
+                                <span class="font-body-md text-body-md text-on-surface-variant">Solmaya karşı 5 yıl
+                                    garantili, su itici ve UV korumalı premium akrilik dokuma.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-on-tertiary-container mt-1"
+                                data-icon="check_circle" data-weight="fill">check_circle</span>
+                            <div>
+                                <strong
+                                    class="font-body-md text-body-md font-semibold text-on-surface block">Elektrostatik
+                                    Toz Boya</strong>
+                                <span class="font-body-md text-body-md text-on-surface-variant">Korozyona dayanıklı,
+                                    uzun ömürlü ve pürüzsüz yüzey bitişi sağlayan yapısal kaplama.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="material-symbols-outlined text-on-tertiary-container mt-1"
+                                data-icon="check_circle" data-weight="fill">check_circle</span>
+                            <div>
+                                <strong class="font-body-md text-body-md font-semibold text-on-surface block">Kompakt
+                                    Kaset Sistemi</strong>
+                                <span class="font-body-md text-body-md text-on-surface-variant">Kapalı konumda kumaşı ve
+                                    mekanizmayı tamamen koruyan, şık tasarımlı kaset opsiyonu.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-primary text-on-primary w-full">
+        <div
+            class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-20 flex flex-col md:flex-row justify-between gap-gutter">
+            <div class="md:w-1/3">
+                <div
+                    class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-on-primary mb-4 tracking-tight">
+                    Öz Ada Çadır
+                </div>
+                <p class="font-body-md text-body-md text-on-primary-container opacity-80 mb-6 max-w-sm">
+                    Mimari Dış Mekan Çözümleri. Profesyonel, sağlam ve zarif gölgelendirme sistemleri ile yaşam
+                    alanlarınıza değer katıyoruz.
+                </p>
+            </div>
+            <div class="md:w-2/3 flex flex-col md:flex-row justify-end gap-12 md:gap-24">
+                <div class="flex flex-col">
+                    <span class="font-label-sm text-label-sm text-on-primary mb-2 opacity-50 uppercase tracking-wider">İletişim</span>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Öz+Ada+Çadır+Tente,+Ankara&query_place_id=ChIJQasmHlxO0xQRZjpFrcmyrl0" target="_blank" rel="noopener noreferrer" class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-secondary-fixed-dim hover:opacity-100 transition-all cursor-pointer">
+                        Lokasyon: Hacı Bayram, A.Adnan Saygun Cd. 35/A, 06050 Altındağ/Ankara
+                    </a>
+                    <a href="tel:+905551234567" class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-secondary-fixed-dim hover:opacity-100 transition-all cursor-pointer">
+                        Numara: +90 555 123 4567
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-on-primary/10">
+            <div
+                class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-6 text-center md:text-left">
+                <span class="font-body-md text-body-md text-on-primary-container opacity-60 text-sm">
+                    © 2024 Öz Ada Çadır. Mimari Dış Mekan Çözümleri.
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Kayan (Floating) Telefon Butonu -->
+    <a href="tel:+905551234567"
+        class="fixed md:hidden bottom-6 right-6 z-[60] bg-primary text-on-primary w-16 h-16 rounded-full flex items-center justify-center shadow-[0_8px_20px_rgba(0,32,70,0.3)] hover:bg-primary-container hover:scale-110 transition-all duration-300 group cursor-pointer"
+        aria-label="Bizi Arayın">
+        <span
+            class="material-symbols-outlined text-3xl group-hover:rotate-12 transition-transform duration-300">call</span>
+    </a>
+
+    <!-- Hamburger Menü Tetikleyici Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = mobileBtn ? mobileBtn.querySelector('span') : null;
+
+            if (mobileBtn && mobileMenu && menuIcon) {
+                mobileBtn.addEventListener('click', function () {
+                    mobileMenu.classList.toggle('hidden');
+                    mobileMenu.classList.toggle('flex');
+
+                    if (mobileMenu.classList.contains('flex')) {
+                        menuIcon.textContent = 'close';
+                    } else {
+                        menuIcon.textContent = 'menu';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
